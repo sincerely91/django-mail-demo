@@ -1,1 +1,3 @@
 *.pyc
+dist
+django_mailify.egg-info

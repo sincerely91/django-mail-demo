@@ -10,7 +10,7 @@ __version_info__ = {
 
 __author__ = 'Keith Hall'
 __contact__ = 'code@keith.io'
-__homepage__ = "http://keithio.github.com/django-mailify/"
+__homepage__ = "http://www.github.com/keithio/django-mailify/"
 __docformat__ = "restructuredtext"
 __license__ = "MIT"
 
