@@ -100,4 +100,11 @@ The parameters are::
 
     new_message = MailifyMessage(...)
 
+Future Work
+-----------
+
+* Integrate support for django-sendgrid_
+
+.. _django-sendgrid: https://github.com/RyanBalfanz/django-sendgrid
+
 Check the mailify/models.py for attribute reference.
