@@ -77,6 +77,10 @@ All of the following are optional, but highly recommended.
 
     MAILIFY_USE_CELERY = True
 
+``MAILIFY_USE_SENDGRID``: enables support for django-sendgrid instead of Django's vanilla mail function
+
+    MAILIFY_USE_SENDGRID = True
+
 Using Celery
 ------------
 
@@ -118,6 +122,23 @@ Usage
     new_message = MailifyMessage(...)
 
     # Check models.py for reference.
+
+Defining ``subject_context`` and ``message_context``
+----------------------------------------------------
+
+These variables must be defined as ``dicts`` from within your code or as JSON from the admin interface.
+
+Sample code::
+
+    message.send(recipients['user1@example.com'], subject_context={'subject': 'Test Message'},
+        message_context={'message': 'Message content'})
+
+Sample form field in ``/admin``::
+
+    Subject context: {"subject": "Test Message"}
+    Message context: {"message": "Message content"}
+
+*Note: the JSON field in the admin interface requires the double-quotes around keys and their values.*
 
 Future Work
 -----------
