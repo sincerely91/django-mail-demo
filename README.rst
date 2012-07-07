@@ -80,7 +80,7 @@ Usage
 
 The parameters are::
 
-desc: string, description of the message, default='Message'
+    desc: string, description of the message, default='Message'
     frm: string, from address, default=settings.DEFAULT_FROM_EMAIL
     recipients: list, recipient e-mail addresses, required
     celery: boolean, whether to use celery to initialize the message, default=False
