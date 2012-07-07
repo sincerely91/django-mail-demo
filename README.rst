@@ -47,7 +47,7 @@ All of the following are optional, but highly recommended.
 
 ``MAILIFY_DELETE_AFTER_SEND``: whether or not to delete the message from the database after successful send (default=True)::
 
-    MAILIFY_DELETE_AFTER_SEND`` = True
+    MAILIFY_DELETE_AFTER_SEND = True
 
 ``MAILIFY_DEFAULT_DESCRIPTION``: a description of the e-mail message, for internal use only (default='Message')::
 
