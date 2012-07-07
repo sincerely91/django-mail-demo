@@ -36,6 +36,8 @@ Getting Started
         'mailify',
     )
 
+3. Run ``./manage.py syncdb``
+
 Configuration
 -------------
 
