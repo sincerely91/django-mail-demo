@@ -143,7 +143,8 @@ Sample form field in ``/admin``::
 Future Work
 -----------
 
-* Integrate support for django-sendgrid_
+* Functional PyPI listing
+* Tighter integration with django-sendgrid_
 
 .. _django-sendgrid: https://github.com/RyanBalfanz/django-sendgrid
 
