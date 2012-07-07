@@ -102,7 +102,7 @@ Usage
 
     new_message = MailifyMessage(...)
 
-Check the mailify/models.py for attribute reference.
+    # Check models.py for reference.
 
 Future Work
 -----------
