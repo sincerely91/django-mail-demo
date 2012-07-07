@@ -68,3 +68,36 @@ Using Celery
 Ensure that you have Celery installed ``django-celery`` and have added ``'kombu.transport.django'`` and ``djcelery`` to your `INSTALLED_APPS`` before ``mailify``.
 
 Then, simply use the correct triggers and settings variables to ensure proper assignment to your worker(s).
+
+Usage
+-----
+
+1. Using signals::
+
+    from mailify.signals import message
+
+    message.send([parameters])
+
+The parameters are::
+
+desc: string, description of the message, default='Message'
+    frm: string, from address, default=settings.DEFAULT_FROM_EMAIL
+    recipients: list, recipient e-mail addresses, required
+    celery: boolean, whether to use celery to initialize the message, default=False
+    when: 0 -- send message now (default)
+          1 -- delay and process with celery
+          2 -- defer and send later with management command
+    keep: boolean, whether to keep the message in the database after sending, default=False
+    subject_context: dict, key-value pairs for completing subject template
+    message_context: dict, key-value pairs for completing message templates
+    subject_template: string, template for subject
+    text_template: string, template for text message
+    html_template: string, template for HTML message
+
+2. Using model instantiation::
+
+    from mailify.models import MailifyMessage
+
+    new_message = MailifyMessage(...)
+
+Check the mailify/models.py for attribute reference.
