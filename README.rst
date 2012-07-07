@@ -4,6 +4,19 @@ django-mailify
 
 Enhance the builtin Django mail functionality to include task queueing or deferment.
 
+Why another mail app?
+---------------------
+
+Djano mailer seems to be quite popular, but I wanted to take advantage of Celery workers rather 
+than depend on a lock file that has unpredictable behavior on various hosts. Additionally, I wanted
+the option to use the same interface to save some messages to send later via a cron job.
+
+Another benefit of ``django-mailify`` is that each message can make use of its own template complete
+with their own context. So, if you want a certain e-mail type to have one template made by a designer,
+you can reference that one, while others may have a different format. The combination of the template
+with the context happens at the time you ``send``, so that processing power can be done via Celery or 
+at a non-peak moment, or immediately if so desired.
+
 Getting Started
 ---------------
 
