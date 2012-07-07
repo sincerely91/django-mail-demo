@@ -26,6 +26,6 @@ class SeparatedValuesField(models.TextField):
 
 try:
     from south.modelsinspector import add_introspection_rules
-    add_introspection_rules([], ["^buqit\.mailify\.fields\.SeparatedValuesField"])
+    add_introspection_rules([], ["^mailify\.fields\.SeparatedValuesField"])
 except:
     pass
