@@ -7,10 +7,10 @@ Enhance the builtin Django mail functionality to include task queueing
 Getting Started
 ---------------
 
-# Install django-mailify
+1. Install django-mailify
     pip install -e git://github.com/keithio/django-mailify.git#egg=mailify
 
-# Add ``mailify`` to your ``INSTALLED_APPS``
+2. Add ``mailify`` to your ``INSTALLED_APPS``
     INSTALLED_APPS += (
         'mailify',
     )
