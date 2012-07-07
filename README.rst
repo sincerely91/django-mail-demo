@@ -7,6 +7,12 @@ Enhance the builtin Django mail functionality to include task queueing or deferm
 Getting Started
 ---------------
 
+0. Requirements::
+
+    Django>=1.4
+    South>=0.7.5
+    jsonfield>=0.9
+
 1. Install django-mailify::
 
     pip install -e git://github.com/keithio/django-mailify.git#egg=mailify
@@ -16,12 +22,6 @@ Getting Started
     INSTALLED_APPS += (
         'mailify',
     )
-
-Requirements::
-
-    Django>=1.4
-    South>=0.7.5
-    jsonfield>=0.9
 
 Configuration
 -------------
