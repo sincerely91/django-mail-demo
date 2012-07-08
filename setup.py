@@ -1,9 +1,10 @@
 from setuptools import setup, find_packages
+from mailify import __version__
 
 
 setup(
     name = "django-mailify",
-    version = "0.1.0alpha2",
+    version = __version__,
     description = "Enhance the builtin Django mail functionality to " + \
         "include task queueing or deferment.",
     author = "Keith Hall",

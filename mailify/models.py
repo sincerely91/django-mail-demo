@@ -63,7 +63,7 @@ class MailifyMessage(models.Model):
         choices = SEND_CHOICES,
         default = 0
     )
-    keep = models.BooleanField(
+    to_keep = models.BooleanField(
         verbose_name = _(u'Keep?'),
         default = (not DELETE_AFTER_SEND),
         help_text = _(u'Enable to force-save the message')
@@ -160,5 +160,5 @@ class MailifyMessage(models.Model):
         # Post-send handling
         self.is_sent = True
         self.save()
-        if not self.keep:
+        if not self.to_keep:
             self.delete()

@@ -50,7 +50,7 @@ def handle_message(sender, **kwargs):
         sender = frm,
         recipients = recipients,
         when = when,
-        keep = keep,
+        to_keep = keep,
         subject_context = subject_context,
         message_context = message_context,
         subject_template = subject_template,

@@ -1,4 +1,3 @@
-
 from celery.task import task
 
 @task
