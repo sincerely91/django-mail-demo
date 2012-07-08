@@ -126,6 +126,8 @@ class MailifyMessage(models.Model):
             else:
                 subject = render_to_string(DEFAULT_SUBJECT_TEMPLATE, \
                     self.subject_context)
+            # Ensure subject is on one line
+            subject = "".join(subject.splitlines())
         else:
             subject = ''
 
